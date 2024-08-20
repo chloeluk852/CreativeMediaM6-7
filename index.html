@@ -19,12 +19,26 @@
         font-family: "Montserrat", sans-serif;
         max-width: 800px;
         margin: 0 auto;
-        padding: 20px;
         background-color: #f0f0f0;
       }
-      h1, h3 {
+      .sticky {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ffffff;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        z-index: 100; /* Ensure the navbar is above other content */
+      }
+      h1 {
         text-align: center;
-        color: #333;
+        color: #404041;
+        margin-top: 60px;
+      }
+      h4 {
+        text-align: center;
+        color: #404041;
       }
       .center {
         display: block;
@@ -97,9 +111,13 @@
     </style>
   </head>
   <body>
-    <img src="images/Preface logo_grey.png" height="80" class="center">
-    <h3>Creative Media Design</h3>
-    <h1>The Movie Trailers</h1>
+    <div class="sticky">
+      <ul>
+        <img src="images/Preface logo_grey.png" height="60" >
+      </ul>
+    </div>
+    <h1>Creative Media Design</h1>
+    <h3>The Movie Trailers</h3>
     
     <ul id="videoList" class="hidden"></ul>
     <div id="cardContainer" class="container"></div>
